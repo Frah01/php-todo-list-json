@@ -24,6 +24,10 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="col-12">
+                        <input class="form-control" type="text" v-model="language" placeholder="Inserici un nuovo linguaggio">
+                        <button class="btn btn-dark" @click="addLanguage">Inserisci</button>
+                    </div>
                 </div>
             </div>
         </div>
