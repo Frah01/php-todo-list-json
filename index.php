@@ -16,10 +16,10 @@
     <div id="app">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div>
-                        <ul>
-                            <li v-for="todo in todoList">
+                <div class="col-12">
+                    <div class=" mt-5 d-flex justify-content-center text-center">
+                        <ul class="list-unstyled">
+                            <li class="list-group-item p-2" v-for="todo in todoList">
                                 {{todo.language}}
                             </li>
                         </ul>
