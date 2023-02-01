@@ -5,7 +5,12 @@ createApp({
         return {
             apiUrl: 'server.php',
             todoList: [],
-            message: 'ciao',
+            linguaggio: '',
         }
+    },
+    mounted() {
+        axios.get(this.apiUrl).then((response) => {
+            this.todoList = response.data
+        })
     }
 }).mount('#app')
