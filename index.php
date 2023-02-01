@@ -15,18 +15,20 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-12">
-                    <div class=" mt-5 d-flex justify-content-center text-center">
+                    <div class=" mt-5 d-flex justify-content-center text-center border">
                         <ul class="list-unstyled">
-                            <li class="list-group-item p-2" v-for="todo in todoList">
+                            <li class="list-group-item p-2 border" v-for="todo in todoList">
                                 {{todo.language}}
                             </li>
                         </ul>
                     </div>
                     <div class="col-12">
-                        <input class="form-control" type="text" v-model="language" placeholder="Inserici un nuovo linguaggio">
-                        <button class="btn btn-dark" @click="addLanguage">Inserisci</button>
+                        <div class="d-flex flex-column align-items-center">
+                            <input class="form-control" type="text" v-model="language" placeholder="Inserici un nuovo linguaggio">
+                            <button class="btn btn-dark mt-2" @click="addLanguage">Inserisci</button>
+                        </div>
                     </div>
                 </div>
             </div>

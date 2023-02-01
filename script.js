@@ -5,21 +5,7 @@ createApp({
         return {
             apiUrl: 'server.php',
             todoList: [],
-            linguaggio: '',
-        }
-    },
-    methods: {
-        addLanguage() {
-            const lang = {
-                todoLang: this.language
-            }
-
-            axios.post(this.apiUrl, lang, {
-                headers: { 'Content-Type': 'multipart/form-data' }
-            }).then((response) => {
-                this.language = '';
-                this.todoList = response.data;
-            })
+            language: '',
         }
     },
     mounted() {
@@ -27,5 +13,20 @@ createApp({
             this.todoList = response.data;
             console.log(this.todoList)
         });
-    }
+    },
+    methods: {
+        addLanguage() {
+            const data = {
+                todoLang: this.language
+            }
+
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.language = '';
+                this.todoList = response.data;
+            })
+        }
+    },
+
 }).mount('#app')
