@@ -1,7 +1,11 @@
 <?php
 
 $stringa = file_get_contents('todo-list.json');
-$todoList = json_decode($stringa, true);
-var_dump($todoList);
+$todo_List = json_decode($stringa, true);
+
+
+
+
+
 header('Content-Type: application/json');
-echo json_encode($todoList);
+echo json_encode($todo_List);
