@@ -22,7 +22,7 @@
                         <ul class="list-group list-group-flush w-50">
                             <li class="list-group-item p-2" v-for="(todo,index) in todoList">
                                 <div class="d-flex justify-content-between">
-                                    {{todo.language}} <button class="btn btn-danger" @click="delete(index)"><i class="fa-solid fa-trash"></i></button>
+                                    {{todo.language}} <button class="btn btn-danger" @click="remove(index)"><i class="fa-solid fa-trash"></i></button>
                                 </div>
                             </li>
                         </ul>

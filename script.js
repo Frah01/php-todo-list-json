@@ -26,7 +26,7 @@ createApp({
                 this.todoList = response.data;
             });
         },
-        delete(index) {
+        remove(index) {
             const data = {
                 delete: index
             }
