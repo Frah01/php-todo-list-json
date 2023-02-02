@@ -17,17 +17,17 @@
         <div class="container">
             <div class="row mt-5">
                 <div class="col-12">
-                    <div class=" mt-5 d-flex justify-content-center text-center border">
-                        <ul class="list-unstyled">
+                    <div class=" mt-5 ">
+                        <ul class="list-group">
                             <li class="list-group-item p-2 border" v-for="todo in todoList">
                                 {{todo.language}}
                             </li>
                         </ul>
                     </div>
-                    <div class="col-12">
-                        <div class="d-flex flex-column align-items-center">
+                    <div class="col-4">
+                        <div class="d-flex align-items-center mt-3">
                             <input class="form-control" type="text" v-model="language" placeholder="Inserici un nuovo linguaggio">
-                            <button class="btn btn-dark mt-2" @click="addLanguage">Inserisci</button>
+                            <button class="btn btn-dark mx-3" @click="addLanguage">Inserisci</button>
                         </div>
                     </div>
                 </div>
