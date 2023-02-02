@@ -11,7 +11,6 @@ createApp({
     mounted() {
         axios.get(this.apiUrl).then((response) => {
             this.todoList = response.data;
-            console.log(this.todoList)
         });
     },
     methods: {
@@ -25,8 +24,18 @@ createApp({
             }).then((response) => {
                 this.language = '';
                 this.todoList = response.data;
-            })
-        }
+            });
+        },
+        delete(index) {
+            const data = {
+                delete: index
+            }
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todoList = response.data;
+            });
+        },
     },
 
 }).mount('#app')

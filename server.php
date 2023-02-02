@@ -14,6 +14,11 @@ if (isset($_POST['todoLang'])) {
     file_put_contents('todo-list.json', json_encode($todo_List));
 }
 
+if (isset($_POST['delete'])) {
+    unset($todo_List[$_POST['delete']]);
+    file_put_contents('todo-list.json', json_encode($todo_List, JSON_PRETTY_PRINT));
+}
+
 
 
 

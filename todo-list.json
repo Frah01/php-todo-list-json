@@ -8,11 +8,15 @@
         "flag": false
     },
     {
-        "language": "VUEJS",
+        "language": "JS",
         "flag": false
     },
     {
-        "language": "JS",
+        "language": "CSS",
+        "flag": false
+    },
+    {
+        "language": "LARAVEL",
         "flag": false
     }
 ]
